@@ -308,7 +308,7 @@ const Franchises = ({ headcampus }) => {
   return (
     <section
       id="Franchises"
-      className="maxWSec w-full px-6 sm:px-12 py-12 flex flex-col gap-8"
+      className="maxWSec w-full px-6 sm:px-12 py-12 flex bg-gray/25 flex-col gap-8"
     >
       <div className="w-full flex max-sm:flex-col justify-between max-sm:gap-8">
         <div className="sm:w-[calc(50%-2rem)] flex flex-col justify-center gap-4">
@@ -412,7 +412,7 @@ const Franchises = ({ headcampus }) => {
                           {item.title}
                         </p>
                       )}
-                      <p className="text-xs sm:text-base text-gray text-right whitespace-nowrap overflow-hidden text-ellipsis w-1/2">
+                      <p className="text-xs sm:text-base text-black/70 text-right whitespace-nowrap overflow-hidden text-ellipsis w-1/2">
                         {item.location}, {item.city}
                       </p>
                     </motion.div>

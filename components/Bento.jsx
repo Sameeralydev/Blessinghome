@@ -69,7 +69,7 @@ const Bento = () => {
             className="transition-all duration-700 group-hover/card:scale-105 origin-bottom-right absolute right-0 bottom-0 w-96 translate-x-[5%] translate-y-[15%] opacity-15"
           />
           <div className="flex flex-col gap-4 relative z-10">
-            <Tag>Our Mission</Tag>
+            <Tag><p className="font-bold">Our Mission</p></Tag>
             <p className="text-base sm:text-lg">
               Our mission is to provide quality education that's not just
               accessible and affordable, but also inclusive and future-focused.
@@ -128,7 +128,7 @@ const Bento = () => {
             className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-40 translate-x-[5%] translate-y-[5%] opacity-15"
           />
           <div className="flex flex-col gap-4 relative z-10">
-            <Tag>Latest</Tag>
+            <Tag><p className="font-bold">Vision</p></Tag>
             <div>
               {News.map((item, i) => {
                 return (

@@ -1,5 +1,4 @@
 import React from "react";
-import Shimmer from "./ui/Shimmer";
 import { Origami } from "./ui/Origami";
 
 const Stats = () => {
