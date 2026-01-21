@@ -72,7 +72,6 @@ const Franchises = ({ headcampus }) => {
       location: "Kot Abdul Malik",
       src: "",
       url: "https://www.google.com/maps/place/RILLS+School+Atlas+Kot+Abdul+Malik+Campus/@31.6233105,74.2352751,17z/data=!3m1!4b1!4m6!3m5!1s0x39191d8a015e10ff:0x7d4599d41b5bf55a!8m2!3d31.623306!4d74.23785!16s%2Fg%2F11sjfq5fvy?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D",
-
     },
     {
       title: "Elbrus",
@@ -251,33 +250,50 @@ const Franchises = ({ headcampus }) => {
     },
   ];
 
+  const cityOrder = [
+    "Lahore",
+    "Gujranwala",
+    "Kamoke",
+    "Gujrat",
+    "Sialkot",
+    "Hafizabad",
+    "Sheikhupura",
+  ];
+
+  const sortedCamps = [...camps].sort((a, b) => {
+    const aIndex = cityOrder.indexOf(a.city);
+    const bIndex = cityOrder.indexOf(b.city);
+
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+
+    return aIndex - bIndex;
+  });
+
   const itemsPerPage = 10;
-  const totalPages = Math.ceil(camps.length / itemsPerPage);
+  const totalPages = Math.ceil(sortedCamps.length / itemsPerPage);
 
   const getCurrentPageItems = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    return camps.slice(startIndex, endIndex);
+    return sortedCamps.slice(startIndex, endIndex);
   };
 
   useEffect(() => {
     const map = mapRef.current;
     const overlay = overlayRef.current;
 
-    // Add class to disable pointer events on the map initially
     map.classList.add("sm:pointer-events-none");
 
-    // Enable pointer events on mousedown
     const handleMouseDown = () => {
       map.classList.remove("sm:pointer-events-none");
     };
 
-    // Disable pointer events on mouseup
     const handleMouseUp = () => {
       map.classList.add("sm:pointer-events-none");
     };
 
-    // Disable pointer events when the mouse leaves the map
     const handleMouseLeave = () => {
       map.classList.add("sm:pointer-events-none");
     };
@@ -287,7 +303,6 @@ const Franchises = ({ headcampus }) => {
     map.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      // Cleanup event listeners
       overlay.removeEventListener("mousedown", handleMouseDown);
       overlay.removeEventListener("mouseup", handleMouseUp);
       map.removeEventListener("mouseleave", handleMouseLeave);
@@ -303,7 +318,8 @@ const Franchises = ({ headcampus }) => {
   };
 
   const currentItems = getCurrentPageItems();
-  const activeItem = active === -1 ? camps[0] : camps[active] || camps[0];
+  const activeItem =
+    active === -1 ? sortedCamps[0] : sortedCamps[active] || sortedCamps[0];
 
   return (
     <section
@@ -442,7 +458,6 @@ const Franchises = ({ headcampus }) => {
                       disabled={currentPage === totalPages}
                       className="w-8 h-8 grid place-content-center bg-black/10 rounded-lg disabled:opacity-40 transition-opacity duration-300"
                     >
-                      {" "}
                       <Image
                         src={"/right.svg"}
                         width={16}
@@ -457,6 +472,7 @@ const Franchises = ({ headcampus }) => {
             )}
           </div>
         </div>
+
         <div
           className={`${
             headcampus ? "aspect-square sm:aspect-[1.4]" : "aspect-square"
@@ -479,6 +495,7 @@ const Franchises = ({ headcampus }) => {
               allowFullScreen={false}
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+
             {!headcampus && (
               <div className="absolute shadow-md left-3 bottom-3 rounded-lg text-left w-[min(calc(100%-5rem),30rem)] sm:min-h-20 bg-white flex flex-col gap-1 p-3 sm:p-4">
                 <p className="text-sm sm:text-xl leading-tight">

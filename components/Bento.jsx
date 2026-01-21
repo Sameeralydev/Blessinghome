@@ -128,7 +128,7 @@ const Bento = () => {
             className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-40 translate-x-[5%] translate-y-[5%] opacity-15"
           />
           <div className="flex flex-col gap-4 relative z-10">
-            <Tag><p className="font-bold">Vision</p></Tag>
+            <Tag><p className="font-bold">Upcoming Events</p></Tag>
             <div>
               {News.map((item, i) => {
                 return (
@@ -202,7 +202,7 @@ const Bento = () => {
             className="transition-all duration-700 group-hover/card:scale-110 origin-bottom-right absolute right-0 bottom-0 w-44 translate-x-[5%] translate-y-[5%] opacity-15"
           />
           <div className="relative z-10 flex flex-col gap-4">
-            <Tag>Our Vision</Tag>
+            <Tag><p className="font-bold">Our Vision</p></Tag>
             <p className="text-base sm:text-lg text-light">
               RILLS believes that every child has the potential to achieve
               success based on his unique talent and skills. RILLS has achieved
