@@ -122,7 +122,7 @@ const Sections = () => {
       link: "#Curriculum",
     },
     {
-      title: "Parent Portal",
+      title: "RILLS Digital",
       icon: "/icons/LMS.svg",
       link: "#LMS",
     },

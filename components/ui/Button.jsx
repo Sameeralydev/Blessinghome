@@ -11,13 +11,15 @@ const Button = ({
   ...props
 }) => {
   const Types = {
-    main: "bg-main hover:bg-mainD",
-    sec: "bg-sec hover:bg-secD",
+    main: "bg-main hover:bg-mainD text-white",
+    sec: "bg-sec hover:bg-secD text-white",
+    custom: "", // allow override via className
   };
 
   const BTypes = {
     main: "border-main hover:border-mainD",
     sec: "border-sec hover:border-secD",
+    custom: "", // allow override via className
   };
 
   const Sizes = {
@@ -26,8 +28,8 @@ const Button = ({
   };
 
   const BSizes = {
-    default:"border-[2px] p-[1px]",
-    small:"border-[1px] p-[2px]",
+    default: "border-[2px] p-[1px]",
+    small: "border-[1px] p-[2px]",
   };
 
   const isFit = full ? "w-full" : "max-w-fit";
@@ -46,17 +48,17 @@ const Button = ({
     >
       <div
         className={cn(
-          "relative transition-all duration-500 overflow-hidden !leading-[1.1] flex items-center text-light",
+          "relative transition-all duration-500 overflow-hidden !leading-[1.1] flex items-center",
           isFit,
           rounded ? "rounded-full" : "rounded-lg",
           Types[btnType],
           Sizes[size]
         )}
-        >
+      >
         {children}
         <div
           className={cn(
-            "absolute rotate-[30deg] scale-y-150 bg-light/20 transition-all duration-700 -left-16 top-0 h-[150%] w-12  group-hover:left-[calc(100%+1rem)] group-active::-left-16"
+            "absolute rotate-[30deg] scale-y-150 bg-light/20 transition-all duration-700 -left-16 top-0 h-[150%] w-12 group-hover:left-[calc(100%+1rem)]"
           )}
         />
       </div>
@@ -65,4 +67,3 @@ const Button = ({
 };
 
 export default Button;
-
