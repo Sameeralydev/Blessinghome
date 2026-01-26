@@ -338,7 +338,7 @@ const Franchises = () => {
               {images.map((img, i) => (
                 <div
                   key={i}
-                  className="bg-white dark:bg-[#2e1804] border border-gray-200 dark:border-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex flex-col items-center text-center hover:bg-[#1d1d1e]"
+                  className="bg-white dark:bg-black border border-gray-200 dark:border-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex flex-col items-center text-center hover:bg-[#1d1d1e]"
                   style={{ width: "450px" }}
                 >
                   {/* Title with theme color via CSS variable fallback to #EDA837 */}

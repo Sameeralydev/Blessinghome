@@ -1,14 +1,14 @@
 export const NavList = [
   {
-    title: "Explore Rills",
+    title: "Explore RILLS",
     content: [
       { title: "About RILLS", slug: "/AboutUs" },
-      { title: "Chairman's Message", slug: "/AboutUs" },
-      { title: "Director's Message", slug: "/AboutUs" },
-      { title: "Our Philosophy", slug: "/AboutUs" },
-      { title: "Vision", slug: "/AboutUs/FAQs" },
-      { title: "Mission", slug: "/AboutUs/Policies" },
-      { title: "Rills History", slug: "/AboutUs/Policies" },
+      { title: "Chairman's Message", slug: "/ChairmanMessage" },
+      { title: "Director's Message", slug: "/DirectorMessage" },
+      { title: "Our Philosophy", slug: "/OurPhilosophy" },
+      { title: "Vision", slug: "/Vision" },
+      { title: "Mission", slug: "/Mission" },
+      { title: "RILLS Journey", slug: "/RillsJourney" },
     ],
   },
   {
@@ -22,26 +22,23 @@ export const NavList = [
     content: [
       { title: "Registration Process", slug: "/StudentLife/OLevel" },
       {
-        title: "Class-wise admission test detail",
+        title: "Withdrawals and Transfers",
         slug: "/StudentLife/ALevel",
       },
     ],
   },
   {
-    title: "Rills World",
+    title: "RILLS World",
     content: [
-      { title: "Alumni", slug: "/StudentLife/OLevel" },
-      { title: "RILLS features", slug: "/StudentLife/OLevel" },
-      { title: "Library", slug: "/StudentLife/OLevel" },
-      { title: "Stage Performance", slug: "/StudentLife/OLevel" },
-      { title: "Sport Activity", slug: "/StudentLife/OLevel" },
-      { title: "Individual Exploration", slug: "/StudentLife/OLevel" },
-      { title: "Student and Teacher Training", slug: "/StudentLife/OLevel" },
+      { title: "Society and Clubs", slug: "/SocietyAndClubs" },
+      { title: "Student Counselling & Mentoring Session", slug: "/StudentCounselling" },
+      { title: "Parenting Workshop", slug: "/ParentingWorkshop" },
+      { title: "Teacher Training", slug: "/TeacherTraining" },
     ],
   },
   {
-    title: "Charter",
-    slug: "/Charter",
+    title: "Careers",
+    slug: "/Careers",
   },
   {
     title: "Contact Us",

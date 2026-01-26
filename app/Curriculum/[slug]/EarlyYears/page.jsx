@@ -1,54 +1,8 @@
 import React from "react";
 import HeroHeader from "@/components/HeroHeader";
 import RichTextRenderer from "@/components/RichTextRenderer";
-import { notFound } from "next/navigation";
 
-const curriculumData = [
-  {
-    title: "Early Years",
-    slug: "EarlyYears",
-  },
-  {
-    title: "Primary Years",
-    slug: "PrimaryYears",
-  },
-  {
-    title: "Middle Years",
-    slug: "MiddleYears",
-  },
-  {
-    title: "Upper Middle Years O-Level",
-    slug: "UpperMiddleYearsOLevel",
-  },
-  {
-    title: "Upper Middle Years Matriculation",
-    slug: "UpperMiddleYearsMatriculation",
-  },
-];
-
-// Generate static params for dynamic routes
-export async function generateStaticParams() {
-  return curriculumData.map((curriculum) => ({
-    slug: curriculum.slug,
-  }));
-}
-
-// Generate metadata
-export async function generateMetadata({ params }) {
-  const slug = params.slug;
-  const curriculum = curriculumData.find((item) => item.slug === slug);
-  if (!curriculum) notFound();
-
-  return {
-    title: `${curriculum.title} - Curriculum | RILLS`,
-    default: "Curriculum | RILLS",
-  };
-}
-
-const Curriculum = async ({ params }) => {
-  const slug = params.slug;
-  const curriculum = curriculumData.find((item) => item.slug === slug);
-
+const EarlyYears = () => {
   const cmsData = {
     content: [
       {
@@ -101,11 +55,10 @@ const Curriculum = async ({ params }) => {
       },
     ],
   };
-  if (!curriculum) notFound();
 
   return (
     <main>
-      <HeroHeader title={curriculum.title} description="RILLS Curriculum" />
+      <HeroHeader title={"Syllabus and Affiliations"} description="RILLS" />
       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />
       </div>
@@ -113,4 +66,4 @@ const Curriculum = async ({ params }) => {
   );
 };
 
-export default Curriculum;
+export default EarlyYears;

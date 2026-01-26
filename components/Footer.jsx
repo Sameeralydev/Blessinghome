@@ -10,6 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
 
 const Footer = () => {
   const contentRef = useRef();
@@ -92,7 +93,7 @@ const Footer = () => {
 
             <a
               href="#social"
-              className="mt-2 inline-flex justify-center rounded-full bg-main px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition"
+              className="mt-2 inline-flex justify-center rounded-full bg-main px-5 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
             >
               Follow Us
             </a>
@@ -120,13 +121,34 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* APP STORE BUTTONS — WHITE LINE SE UPAR */}
+        <div className="maxWSec px-4 sm:px-12 flex justify-end mb-4 gap-3">
+          <Link
+            href="#"
+            target="_blank"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#FCBB55] text-white font-medium shadow hover:scale-105 transition"
+          >
+            <FaGooglePlay className="text-xl" />
+            <span className="text-sm">Get it on Play Store</span>
+          </Link>
+
+          <Link
+            href="#"
+            target="_blank"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black text-white font-medium shadow hover:scale-105 transition"
+          >
+            <FaApple className="text-xl" />
+            <span className="text-sm">Download on App Store</span>
+          </Link>
+        </div>
+
         {/* BOTTOM BAR */}
         <div className="border-t py-2 sm:py-4 border-[#333]">
           <div
             id="social"
             className="maxWSec max-sm:pb-8 text-sm sm:text-base flex flex-wrap justify-between items-center px-4"
           >
-            <div>© 2025 Rills</div>
+            <div>© 2025 RILLS</div>
 
             {/* SOCIAL ICONS */}
             <div className="flex gap-3 sm:gap-4 items-center text-xl">

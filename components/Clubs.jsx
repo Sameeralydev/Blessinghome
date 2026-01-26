@@ -5,44 +5,56 @@ import { gsap } from "gsap";
 import TiltCard from "./ui/TiltCard";
 import Link from "next/link";
 
-/* 🔹 DATA (logos removed) */
+/* 🔹 DATA (with images) */
 const List = [
   {
-    title: ["Reading", "Society"],
     slug: "/Curriculum/EarlyYears",
+    image: "/clubs/ReadingSociety.jpeg",
   },
   {
-    title: ["Sports", "Club"],
     slug: "/Curriculum/PrimaryYears",
+    image: "/clubs/sportsClub.jpeg",
   },
   {
-    title: ["Theatre", "Society"],
     slug: "/Curriculum/MiddleYears",
+    image: "/clubs/Theater.jpeg",
   },
 ];
 
 const Clubs = ({ direction = "left", speed = 1 }) => {
-  const marquee = useRef();
-  const first = useRef();
-  const second = useRef();
-  let xPercent = 0;
+  const marquee = useRef(null);
+  const first = useRef(null);
+  const second = useRef(null);
+  const xPercent = useRef(0);
 
   const ArrayData = [...List, ...List, ...List, ...List];
 
   useEffect(() => {
+    if (!first.current || !second.current) return;
+
+    let rafId;
+
     const animate = () => {
+      if (!first.current || !second.current) return;
+
       if (direction === "left") {
-        if (xPercent < -100) xPercent = 0;
-        xPercent -= speed / 10;
+        if (xPercent.current < -100) xPercent.current = 0;
+        xPercent.current -= speed / 10;
       } else {
-        if (xPercent > 0) xPercent = -100;
-        xPercent += speed / 10;
+        if (xPercent.current > 0) xPercent.current = -100;
+        xPercent.current += speed / 10;
       }
 
-      gsap.set([first.current, second.current], { xPercent });
-      requestAnimationFrame(animate);
+      gsap.set([first.current, second.current], {
+        xPercent: xPercent.current,
+      });
+
+      rafId = requestAnimationFrame(animate);
     };
-    requestAnimationFrame(animate);
+
+    rafId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(rafId);
   }, [direction, speed]);
 
   return (
@@ -72,29 +84,25 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main/30 to-mainD/30"
                         : "bg-gradient-to-br from-sec/30 to-secD/30"
-                    } w-[220px] sm:w-[320px] lg:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3`}
+                    } w-[220px] sm:w-[320px] lg:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
                     innerClassName={`${
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main to-mainD"
                         : "bg-gradient-to-br from-sec to-secD"
-                    } rounded-2xl p-2 sm:p-4 flex flex-col gap-4 justify-between`}
+                    } rounded-2xl p-0 flex items-center justify-center`}
                   >
-                    <div className="w-full h-full p-2 lg:p-4 flex flex-col gap-4 justify-between">
+                    {/* Tag overlay on top-left */}
+                    <div className="absolute top-2 left-2 z-10">
                       <Tag>RILLS</Tag>
+                    </div>
 
-                      {/* Images removed */}
-
-                      <h4 className="text-xl sm:text-3xl lg:text-5xl font-medium">
-                        {item.title.map((word, j) => (
-                          <div
-                            key={j}
-                            className="leading-normal sm:leading-tight"
-                          >
-                            {word}
-                            <br />
-                          </div>
-                        ))}
-                      </h4>
+                    {/* Full-cover Image centered */}
+                    <div className="w-full h-full flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt="Club"
+                        className="w-full h-full object-cover rounded-2xl"
+                      />
                     </div>
                   </TiltCard>
                 </Link>
@@ -113,29 +121,25 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main/30 to-mainD/30"
                         : "bg-gradient-to-br from-sec/30 to-secD/30"
-                    } w-[220px] sm:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3`}
+                    } w-[220px] sm:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
                     innerClassName={`${
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main to-mainD"
                         : "bg-gradient-to-br from-sec to-secD"
-                    } rounded-2xl p-2 sm:p-4 flex flex-col gap-4 justify-between`}
+                    } rounded-2xl p-0 flex items-center justify-center`}
                   >
-                    <div className="w-full h-full p-2 lg:p-4 flex flex-col gap-4 justify-between">
+                    {/* Tag overlay on top-left */}
+                    <div className="absolute top-2 left-2 z-10">
                       <Tag>RILLS</Tag>
+                    </div>
 
-                      {/* Images removed */}
-
-                      <h4 className="text-xl sm:text-3xl lg:text-5xl font-medium">
-                        {item.title.map((word, j) => (
-                          <div
-                            key={j}
-                            className="leading-normal sm:leading-tight"
-                          >
-                            {word}
-                            <br />
-                          </div>
-                        ))}
-                      </h4>
+                    {/* Full-cover Image centered */}
+                    <div className="w-full h-full flex items-center justify-center">
+                      <img
+                        src={item.image}
+                        alt="Club"
+                        className="w-full h-full object-cover rounded-2xl"
+                      />
                     </div>
                   </TiltCard>
                 </Link>
