@@ -124,7 +124,7 @@ const Footer = () => {
         {/* APP STORE BUTTONS — WHITE LINE SE UPAR */}
         <div className="maxWSec px-4 sm:px-12 flex justify-end mb-4 gap-3">
           <Link
-            href="#"
+            href="https://play.google.com/store/apps/details?id=com.alaska.rills"
             target="_blank"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#FCBB55] text-white font-medium shadow hover:scale-105 transition"
           >
@@ -133,7 +133,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="#"
+            href="https://apps.apple.com/pk/app/rills-schools/id6752411481"
             target="_blank"
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black text-white font-medium shadow hover:scale-105 transition"
           >
