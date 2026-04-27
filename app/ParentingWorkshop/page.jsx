@@ -7,11 +7,15 @@ const ParentingWorkshop = () => {
     content: [
       {
         type: "h2",
-        text: "Parenting Workshop:",
+        text: "Parenting Workshop",
       },
       {
         type: "p",
-        text: "RILLS School organizes exclusive Parenting Workshops at every campus, led by our visionary Founder and Chairman, Mr. Riasat Ali Asad. These workshops are designed to empower parents with practical strategies for supporting their child’s academic, social, and emotional development. Attendees gain insights into effective parenting techniques, fostering a growth mindset, and enhancing communication with their children. By bridging the gap between home and school, these sessions help parents actively participate in their child’s learning journey, creating a strong partnership that nurtures confident, well-rounded, and successful students.",
+        text: "Blessing Home Public School believes parents are essential partners in a child's development. Our parent guidance sessions are aimed at helping families better support study habits, behavior, confidence, and emotional wellbeing at home.",
+      },
+      {
+        type: "p",
+        text: "These interactions help strengthen the connection between school and home so that students receive consistent support in their academic and personal growth.",
       },
     ],
   };
@@ -19,8 +23,8 @@ const ParentingWorkshop = () => {
   return (
     <main>
       <HeroHeader
-        title={"Parenting Workshop:"}
-        description="RILLS School offers an exceptional educational experience"
+        title={"Parenting Workshop"}
+        description="Blessing Home Public School"
       />
       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />

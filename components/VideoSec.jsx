@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaPlay } from "react-icons/fa";
-import WaveButton from "./ui/WaveButton";
+import Button from "./ui/Button";
 
 const VideoSec = () => {
   return (
@@ -12,10 +11,10 @@ const VideoSec = () => {
       >
         <div className="w-screen h-screen fixed left-0 top-0 object-cover">
           <Image
-            src={"/youtube.png"}
+            src={"/mainbanner.jpeg"}
             width={1000}
             height={600}
-            alt="Hero Image"
+            alt="Blessing Home Public School"
             className="w-full h-full absolute inset-0 object-cover"
           />
           <div className="bg-gradient-to-b from-main/40 to-sec/40 absolute inset-0 z-10"></div>
@@ -25,23 +24,30 @@ const VideoSec = () => {
             style={{ textShadow: "0 0 1rem #00000020" }}
             className="h1 text-center"
           >
-            Corporate Social
+            Learning That Feels
             <br />
-            Responsibility
+            Like Home
           </h1>
           <h4
             style={{ textShadow: "0 0 .5rem #00000020" }}
             className="mb-4 text-center max-w-[min(54ch,85%)] leading-normal text-sm sm:text-base"
           >
-            RILLS has always been a strong advocate of social responsibility and
-            is committed to providing public and community services through
-            wide-ranging activities.
+            Blessing Home Public School supports students with structured
+            academics, caring supervision, co-curricular opportunities, and a
+            welcoming campus culture for families in Pakpattan.
           </h4>
-          <a href="https://youtu.be/VTuCDim5FQM?feature=shared" target="_blank">
-            <WaveButton>
-              <FaPlay />
-            </WaveButton>
-          </a>
+          <div className="flex gap-4 flex-wrap justify-center">
+            <a href="tel:03071693780">
+              <Button>Call 03071693780</Button>
+            </a>
+            <a
+              href="https://www.facebook.com/blessinghomeschool"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button btnType="sec">Visit Facebook</Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

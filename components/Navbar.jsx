@@ -21,18 +21,16 @@ const Navbar = () => {
     setActiveDropdown(index);
     const margin = 48;
     const navItemRect = event.currentTarget.getBoundingClientRect();
-    const dropdownWidth = 16 * 14; // Approximate dropdown width, adjust as needed
+    const dropdownWidth = 16 * 14;
     const screenWidth = window.innerWidth;
     let leftPosition = navItemRect.left;
 
-    // Check if the dropdown would overflow the right side of the screen
     if (leftPosition + dropdownWidth > screenWidth) {
-      leftPosition = screenWidth - dropdownWidth - margin; // Adjust with some margin
+      leftPosition = screenWidth - dropdownWidth - margin;
     }
 
-    // Check if the dropdown would overflow the left side of the screen
     if (leftPosition < 10) {
-      leftPosition = margin; // Adjust with some margin
+      leftPosition = margin;
     }
 
     setDropdownPosition(leftPosition);
@@ -45,7 +43,6 @@ const Navbar = () => {
 
   const handleNavClose = () => {
     setIsOpen(false);
-    // document.body.classList.remove("hide-scrollbar");
   };
 
   const transition = {
@@ -55,21 +52,16 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      // initial={{ y: -20, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={transition}
-      className="sticky -top-4 w-full z-50 h-0 max-w-full"
-    >
+    <motion.nav className="sticky -top-4 w-full z-50 h-0 max-w-full">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full maxW p-8">
         <div className="shadow-[0_0_0.5rem_0_#00000020] flex items-center justify-between rounded-xl h-16 bg-light text-dark px-3">
           <Link href={"/"} name="home link" className="mr-auto">
             <Image
-              src={"/RILLS Logo H.png"}
+              src={"/blessinghomelogo.jpeg"}
               width={300}
               height={200}
-              alt="Logo"
-              className="h-8 sm:h-12 w-auto"
+              alt="Blessing Home Public School logo"
+              className="h-8 sm:h-12 w-auto rounded-md"
             />
           </Link>
           <div
@@ -203,11 +195,11 @@ const Navbar = () => {
               <div className="bg-main/20 px-2 py-4 mb-4 rounded-xl flex gap-2 items-center justify-between">
                 <Link href={"/"} name="home link">
                   <Image
-                    src={"/RILLS Logo H.png"}
+                    src={"/blessinghomelogo.jpeg"}
                     width={300}
                     height={200}
-                    alt="Logo"
-                    className="h-12 w-auto"
+                    alt="Blessing Home Public School logo"
+                    className="h-12 w-auto rounded-md"
                   />
                 </Link>
                 <button

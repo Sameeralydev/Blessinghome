@@ -7,15 +7,15 @@ const Library = () => {
     content: [
       {
         type: "h2",
-        text: "Discover",
+        text: "Library",
       },
       {
         type: "p",
-        text: "A world where knowledge meets imagination and curiosity knows no bounds. At RILLS Library, we believe that every book is a journey waiting to unfold. Our modern, dynamic library is not just a place to borrow books, but a hub of inspiration where students can explore, learn, and grow.",
+        text: "The library at Blessing Home Public School supports reading habits, curiosity, and independent learning. Students are encouraged to explore age-appropriate books and learning resources that strengthen language and understanding.",
       },
       {
         type: "p",
-        text: "We boast a vast collection of history, stories, and subject-specific books, offering a treasure trove of literature and resources to ignite your passion for reading and discovery. With interactive learning spaces and a vibrant atmosphere, RILLS Library is designed to foster creativity and critical thinking. Dive into our diverse range of materials and experience the joy of learning in an environment tailored for your success",
+        text: "A reading-friendly environment helps children grow academically while also developing imagination, concentration, and love for knowledge.",
       },
     ],
   };
@@ -23,10 +23,10 @@ const Library = () => {
   return (
     <main>
       <HeroHeader
-        title={"RILLS Library"}
-        description="Your Gateway to Endless Possibilities!"
+        title={"Library"}
+        description="Blessing Home Public School"
       />
-       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
+      <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />
       </div>
     </main>

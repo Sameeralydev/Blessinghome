@@ -5,19 +5,21 @@ import { gsap } from "gsap";
 import TiltCard from "./ui/TiltCard";
 import Link from "next/link";
 
-/* 🔹 DATA (with images) */
 const List = [
   {
-    slug: "/Curriculum/EarlyYears",
-    image: "/clubs/ReadingSociety.jpeg",
+    slug: "/SocietyAndClubs",
+    title: "Reading and Expression",
+    desc: "Language growth, confidence, and thoughtful communication.",
   },
   {
-    slug: "/Curriculum/PrimaryYears",
-    image: "/clubs/sportsClub.jpeg",
+    slug: "/SocietyAndClubs",
+    title: "Sports and Wellbeing",
+    desc: "Healthy routines, teamwork, movement, and discipline.",
   },
   {
-    slug: "/Curriculum/MiddleYears",
-    image: "/clubs/Theater.jpeg",
+    slug: "/SocietyAndClubs",
+    title: "Creative Activities",
+    desc: "Art, presentation, participation, and imagination.",
   },
 ];
 
@@ -63,7 +65,7 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
       className="maxW sm:px-12 py-12 flex gap-12 flex-col"
     >
       <h2 className="max-sm:px-4 h2 text-center">
-        <span className="text-main">RILLS</span> Club <br />& Societies
+        Student Life at <span className="text-main">Blessing Home</span>
       </h2>
 
       <div className="flex gap-4 text-light">
@@ -72,7 +74,6 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
             ref={marquee}
             className="h-fit w-fit flex-nowrap relative flex border-y"
           >
-            {/* FIRST */}
             <div
               ref={first}
               className="h-full flex-1 flex w-fit flex-nowrap items-center"
@@ -84,32 +85,35 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main/30 to-mainD/30"
                         : "bg-gradient-to-br from-sec/30 to-secD/30"
-                    } w-[220px] sm:w-[320px] lg:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
+                    } w-[220px] sm:w-[320px] lg:w-[430px] aspect-[.9] sm:aspect-[1.1] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
                     innerClassName={`${
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main to-mainD"
                         : "bg-gradient-to-br from-sec to-secD"
-                    } rounded-2xl p-0 flex items-center justify-center`}
+                    } rounded-2xl p-6 sm:p-8 flex flex-col justify-between`}
                   >
-                    {/* Tag overlay on top-left */}
-                    <div className="absolute top-2 left-2 z-10">
-                      <Tag>RILLS</Tag>
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="absolute -top-10 -right-6 h-40 w-40 rounded-full border-[18px] border-white/80" />
+                      <div className="absolute bottom-10 left-6 h-24 w-24 rounded-full bg-white/20" />
+                      <div className="absolute bottom-6 right-10 h-16 w-16 rounded-full border-[10px] border-white/60" />
                     </div>
 
-                    {/* Full-cover Image centered */}
-                    <div className="w-full h-full flex items-center justify-center">
-                      <img
-                        src={item.image}
-                        alt="Club"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
+                    <div className="relative z-10 flex flex-col h-full">
+                      <Tag>{item.title}</Tag>
+                      <div className="mt-auto">
+                        <h3 className="font-berlin text-3xl sm:text-5xl leading-[0.95] text-white">
+                          {item.title}
+                        </h3>
+                        <p className="mt-4 text-sm sm:text-lg text-white/90 max-w-[22ch]">
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
                   </TiltCard>
                 </Link>
               ))}
             </div>
 
-            {/* SECOND */}
             <div
               ref={second}
               className="absolute left-full top-0 h-full flex w-full flex-nowrap items-center"
@@ -121,25 +125,29 @@ const Clubs = ({ direction = "left", speed = 1 }) => {
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main/30 to-mainD/30"
                         : "bg-gradient-to-br from-sec/30 to-secD/30"
-                    } w-[220px] sm:w-[430px] aspect-[.9] sm:aspect-[1.3] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
+                    } w-[220px] sm:w-[430px] aspect-[.9] sm:aspect-[1.1] rounded-3xl mx-1 sm:mx-3 overflow-hidden relative`}
                     innerClassName={`${
                       i % 2 === 0
                         ? "bg-gradient-to-br from-main to-mainD"
                         : "bg-gradient-to-br from-sec to-secD"
-                    } rounded-2xl p-0 flex items-center justify-center`}
+                    } rounded-2xl p-6 sm:p-8 flex flex-col justify-between`}
                   >
-                    {/* Tag overlay on top-left */}
-                    <div className="absolute top-2 left-2 z-10">
-                      <Tag>RILLS</Tag>
+                    <div className="absolute inset-0 opacity-20">
+                      <div className="absolute -top-10 -right-6 h-40 w-40 rounded-full border-[18px] border-white/80" />
+                      <div className="absolute bottom-10 left-6 h-24 w-24 rounded-full bg-white/20" />
+                      <div className="absolute bottom-6 right-10 h-16 w-16 rounded-full border-[10px] border-white/60" />
                     </div>
 
-                    {/* Full-cover Image centered */}
-                    <div className="w-full h-full flex items-center justify-center">
-                      <img
-                        src={item.image}
-                        alt="Club"
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
+                    <div className="relative z-10 flex flex-col h-full">
+                      <Tag>{item.title}</Tag>
+                      <div className="mt-auto">
+                        <h3 className="font-berlin text-3xl sm:text-5xl leading-[0.95] text-white">
+                          {item.title}
+                        </h3>
+                        <p className="mt-4 text-sm sm:text-lg text-white/90 max-w-[22ch]">
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
                   </TiltCard>
                 </Link>

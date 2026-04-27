@@ -8,21 +8,19 @@ const AccessLMS = () => {
       <div className="w-full flex bg-main/10 rounded-3xl max-sm:flex-col">
         <div className="flex-1 flex flex-col justify-center p-8 gap-4 ">
           <h2 className="h2">
-            Digitizing <br />
-            <span className="text-main">RILLS</span>
+            Admissions and <br />
+            <span className="text-main">Parent Support</span>
           </h2>
           <p className="text-base sm:text-lg text-gray leading-snug max-w-[50ch] mb-4">
-            Most of their intrinsic abilities while also modelling good social
-            behavior, so preparing them to be responsible members of society on
-            a worldwide scale.
+            Need help with admission, class information, or general school
+            guidance? Reach out directly and our team will help you with the
+            next step.
           </p>
 
-          {/* Buttons side by side */}
           <div className="flex flex-row gap-4 mt-4">
-            {/* Parent Portal */}
-            <a href="https://rills.edu.pk/signin" target="_blank">
+            <a href="/OnlineAdmission">
               <Button>
-                <span>Access Parent Portal</span>
+                <span>Open Admission Form</span>
                 <svg
                   className="h-auto w-4"
                   viewBox="0 0 18 13"
@@ -39,13 +37,12 @@ const AccessLMS = () => {
               </Button>
             </a>
 
-            {/* Staff Portal */}
-            <a href="https://rills.edu.pk/login" target="_blank">
+            <a href="tel:03071693780">
               <Button
                 btnType="custom"
                 className="bg-black text-white border-black hover:opacity-90"
               >
-                <span>Access Staff Portal</span>
+                <span>Call School Office</span>
                 <svg
                   className="h-auto w-4"
                   viewBox="0 0 18 13"
@@ -66,11 +63,11 @@ const AccessLMS = () => {
 
         <div className="flex-1 aspect-square flex justify-center items-center">
           <Image
-            src={"/lms.png"}
+            src={"/blessinghomelogo.jpeg"}
             width={1000}
             height={600}
-            alt="Hero Image"
-            className="w-full"
+            alt="Blessing Home Public School logo"
+            className="w-full max-w-md rounded-3xl object-contain p-6"
           />
         </div>
       </div>

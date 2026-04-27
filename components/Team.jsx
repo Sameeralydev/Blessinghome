@@ -1,23 +1,25 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 const teamMembers = [
   {
-    name: "Riasat Ali Asad",
-    title: "Founder & Chairman",
-    image: "/owner.webp",
+    name: "School Leadership",
+    title: "Academic guidance and school direction",
+    description:
+      "Our leadership team works to maintain discipline, educational quality, and a safe learning environment for every student.",
   },
   {
-    name: "Mrs. Iram Qazi",
-    title: "Patron in Chief",
-    image: "/patron.webp",
+    name: "Administration",
+    title: "Student support and parent coordination",
+    description:
+      "The administrative team helps families with admissions, communication, scheduling, and day-to-day school coordination.",
   },
   {
-    name: "Asif Ali Javed",
-    title: "Director & Head of Operations",
-    image: "/director.webp",
+    name: "Teaching Team",
+    title: "Dedicated classroom mentorship",
+    description:
+      "Our teachers focus on concept clarity, values, confidence building, and the personal progress of each learner.",
   },
 ];
 
@@ -26,22 +28,16 @@ export default function Team() {
 
   useEffect(() => {
     const slider = sliderRef.current;
-    let scrollAmount = 0;
 
     const interval = setInterval(() => {
       if (!slider) return;
 
-      scrollAmount += 1;
       slider.scrollLeft += 1;
 
-      if (
-        slider.scrollLeft + slider.clientWidth >=
-        slider.scrollWidth
-      ) {
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
         slider.scrollLeft = 0;
-        scrollAmount = 0;
       }
-    }, 20); // speed (lower = faster)
+    }, 20);
 
     return () => clearInterval(interval);
   }, []);
@@ -55,24 +51,25 @@ export default function Team() {
         Meet the <span className="text-main">Leadership</span>
       </h2>
 
-      <div
-        ref={sliderRef}
-        className="w-full overflow-x-hidden"
-      >
+      <div ref={sliderRef} className="w-full overflow-x-hidden">
         <div className="flex gap-8 w-max">
           {[...teamMembers, ...teamMembers].map((member, index) => (
             <div
               key={index}
               className="min-w-[350px] flex flex-col items-center gap-4"
             >
-              <div className="h-[29rem] w-full overflow-hidden rounded-lg">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={800}
-                  height={800}
-                  className="h-full w-full object-cover"
-                />
+              <div className="h-[29rem] w-full overflow-hidden rounded-lg bg-gradient-to-br from-sec via-[#232d6a] to-main p-8 text-light flex flex-col justify-end">
+                <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur p-6">
+                  <p className="text-sm uppercase tracking-[0.25em] text-white/70">
+                    Blessing Home Public School
+                  </p>
+                  <h4 className="font-berlin text-3xl leading-tight mt-3">
+                    {member.name}
+                  </h4>
+                  <p className="text-base text-white/90 mt-3">
+                    {member.description}
+                  </p>
+                </div>
               </div>
 
               <div className="text-center">

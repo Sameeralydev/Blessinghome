@@ -3,44 +3,44 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Early Montessori Education",
-    color: "bg-pink-400",
-    desc: "At RILLS Schools, our Montessori wing focuses on fostering a love for learning from a young age. Using hands-on activities and child-centered approaches, we encourage independence and creativity in our students. This nurturing environment helps children develop critical thinking skils and a sense of responsibility, laying a strong foundation for their educational journey.",
+    title: "Foundational Learning",
+    color: "bg-[#c33e3f]",
+    desc: "We focus on concept-based teaching in core subjects so students build clear understanding, confidence, and steady academic progress from the early years onward.",
   },
   {
-    title: "Technology-Enhanced Learning",
-    color: "bg-blue-400",
-    desc: "In today's digital age, RILLS Schools integrates cutting-edge technology into our clasrooms to enrich the learning experience. Our digital education program equips students with essential 21st-century skills, allowing them to navigate various technological tools confidently. By combining traditional teaching methods with modern technology, we create a dynamic learning environment.",
+    title: "Caring Environment",
+    color: "bg-[#232d6a]",
+    desc: "Blessing Home Public School believes children thrive in a secure and respectful atmosphere where teachers guide with patience, discipline, and personal attention.",
   },
   {
-    title: "Contemporary Curriculum",
-    color: "bg-green-400",
-    desc: "RILLS Schools is committed to providing a modern curriculum that meets the evolving needs of students and society. Our curriculum is designed to be relevant, inclusive, and adaptable, incorporating diverse perspectives and global issues. This approach not only enhances academic achievement but also fosters critical thinking and problem-solving abilities, ensuring our students",
+    title: "Character Building",
+    color: "bg-[#f0b24b]",
+    desc: "Strong manners, honesty, responsibility, and respect are woven into school life so that students grow not only academically, but also morally and socially.",
   },
   {
-    title: "Early Montessori Education",
-    color: "bg-yellow-400",
-    desc: "At RILLS Schools, we emphasize the importance of spiritual growth alongside academic excellence. Our Quran and Seerat program offers students a comprehensive understanding of Islamic teachings and values, guiding them to lead lives of integrity and compassion. This integration of faith and education helps students develop a strong moral compass and a sense of purpose in their lives.",
+    title: "Parent Partnership",
+    color: "bg-[#4d6b3c]",
+    desc: "We believe real progress happens when school and home work together, so we keep communication open and involve parents in each child's learning journey.",
   },
   {
-    title: "Personal Growth Development",
-    color: "bg-purple-400",
-    desc: "We believe that personal growth is as crucial as academic success. RILLS Schools focuses on developing the whole child, nurturing qualities such as self-confidence, resilience, and effective communication. Through various extracurricular activities, workshops, and mentorship programs, we empower students to explore their interests and become well-rounded individuals.",
+    title: "Student Confidence",
+    color: "bg-[#b76d2d]",
+    desc: "Through presentations, class participation, activities, and mentorship, students learn to express themselves, take initiative, and develop healthy self-belief.",
   },
   {
-    title: "Values and Character Education",
-    color: "bg-red-400",
-    desc: "At RILLS School's character building is woven into the fabric of our educational approach. We instill strong values such as respect/ empathy, and responsibility, preparing our students to be throughtful and ethical leaders in society. By promoting a culture of kindness and inclusivity, we create a supportive community where students learn the importance of giving back.",
+    title: "Activity-Based Growth",
+    color: "bg-[#7d8b32]",
+    desc: "Sports, clubs, assemblies, and school events help students discover interests, improve teamwork, and enjoy a balanced school experience beyond textbooks.",
   },
   {
-    title: "Critical Thinking Skills",
-    color: "bg-indigo-400",
-    desc: "RILLS Schools prioritizes the development of critical thinking skills, encouraging student to think independently and analytically- Through inquiry-based learning, discussions, and problem-solving activities, we cultivate an environment where student feel empowered to ask questions and seek solutions. This focus on critical thinking not only enhances academic performance.",
+    title: "Progress Monitoring",
+    color: "bg-[#5f4b8b]",
+    desc: "Regular assessments and feedback help us understand each learner's strengths and needs, allowing timely support and consistent academic improvement.",
   },
   {
-    title: "STEAM Learning Approach",
-    color: "bg-emerald-400",
-    desc: "Our STEAM program (Science, Technology, Engineering, Arts, and Mathematics) at RILLS Schools promotes creativity and innovation through interdisciplinary learning. By integrating these subjects, we encourage students to make connections and apply their knowledge in practical ways. This hands-on approach not only lgnites curiosity but also prepares students for future careers.",
+    title: "Community Values",
+    color: "bg-[#3b6778]",
+    desc: "As a school rooted in Pakpattan, we aim to serve families with sincerity, quality teaching, and an educational culture that supports long-term growth.",
   },
 ];
 
@@ -80,10 +80,10 @@ export default function About() {
     <section className="maxWSec px-6 sm:px-12 py-12 flex gap-12 flex-col">
       <div className="text-center space-y-4">
         <h2 className="h2">
-          Salient features of <span className="text-main">RILLS</span>
+          Why Families Choose <span className="text-main">Blessing Home</span>
         </h2>
         <h2 className="h3 text-gray !font-normal">
-          The Fastest Growing Network in Central Punjab
+          A value-driven school experience designed for meaningful learning
         </h2>
       </div>
       <div className="flex flex-wrap justify-center p-4">

@@ -9,9 +9,14 @@ import Footer from "../components/Footer";
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata = {
-  title: "Rills | School",
+  title: "Blessing Home Public School",
   description:
-    "At RILLS, we imagine a future where every child shines bright with possibilities. As the best school in Pakistan, our mission is to nurture strong, kind, and curious individuals within a safe and inspiring space. Guided by a child-centered learning philosophy, a dedicated team, and a balanced curriculum, we provide the groundwork for lifelong growth. /n Whether your child is just beginning their early childhood education or getting ready for their next big steps, our school is here to support and guide them at every turn.",
+    "Blessing Home Public School in Pakpattan provides a caring and disciplined learning environment focused on academics, values, creativity, and student development.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

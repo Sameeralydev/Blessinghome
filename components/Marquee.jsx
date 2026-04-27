@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 
 const DefaultList = [
-  "Be a part of the most rapidly growing network nationwide!",
+  "A caring and disciplined school environment for growing minds.",
 ];
 
 export default function Marquee({ List = DefaultList, direction, speed }) {
@@ -51,7 +51,7 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
     } else {
       requestAnimationFrame(rightAnimation);
     }
-  }, [direction]);
+  }, [direction, speed]);
 
   return (
     <section
@@ -90,13 +90,13 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 <div className="text-lg sm:text-3xl text-dark whitespace-nowrap flex-shrink-0">
                   {item}
                 </div>
-                {i != ArrayData.length && (
+                {i !== ArrayData.length && (
                   <Image
-                    src={"/RILLS-Logo-new.png"}
+                    src={"/blessinghomelogo.jpeg"}
                     width={300}
                     height={200}
                     alt="Logo"
-                    className="h-10 sm:h-14 w-auto"
+                    className="h-10 sm:h-14 w-auto rounded-md"
                   />
                 )}
               </div>
@@ -116,13 +116,13 @@ export default function Marquee({ List = DefaultList, direction, speed }) {
                 <div className="text-lg sm:text-3xl text-dark whitespace-nowrap flex-shrink-0">
                   {item}
                 </div>
-                {i != ArrayData.length && (
+                {i !== ArrayData.length && (
                   <Image
-                    src={"/RILLS-Logo-new.png"}
+                    src={"/blessinghomelogo.jpeg"}
                     width={300}
                     height={200}
                     alt="Logo"
-                    className="h-10 sm:h-14 w-auto"
+                    className="h-10 sm:h-14 w-auto rounded-md"
                   />
                 )}
               </div>

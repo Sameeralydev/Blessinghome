@@ -10,18 +10,18 @@ const MatterBlocks = dynamic(() => import("./ui/MatterBlocks"), {
 const Dragables = () => {
   const labels = [
     {
-      title: "42",
-      sub: "Franchises",
+      title: "01",
+      sub: "Pakpattan Campus",
       custom: "text-light bg-dark border-light",
     },
     {
-      title: "8k",
-      sub: "Enroll Students",
+      title: "24/7",
+      sub: "Admission Support",
       custom: "text-light bg-main border-main",
     },
     {
-      title: "400",
-      sub: "A Scored",
+      title: "100%",
+      sub: "Student Care",
       custom: "text-light bg-sec border-main",
     },
   ];
@@ -35,25 +35,24 @@ const Dragables = () => {
               return (
                 <div
                   key={index}
-                  className={`${item.custom} left-[-100vw] top-[-100vh] rounded-[2rem] sm:rounded-[3rem] absolute h-24 md:h-44 w-[10rem] sm:w-[18rem] flex-1 flex  flex-col justify-center items-center cursor-grab z-20 dragableLabels pointer-events-none`}
+                  className={`${item.custom} left-[-100vw] top-[-100vh] rounded-[2rem] sm:rounded-[3rem] absolute h-24 md:h-44 w-[10rem] sm:w-[18rem] flex-1 flex flex-col justify-center items-center cursor-grab z-20 dragableLabels pointer-events-none`}
                 >
-                  <h2 className="h1">{item.title}</h2>
-                  <p className="text-base md:text-2xl leading-snug">
+                  <h2 className="h1 text-center">{item.title}</h2>
+                  <p className="text-base md:text-2xl leading-snug text-center">
                     {item.sub}
                   </p>
                 </div>
               );
             })}
             {Array.from({ length: 20 }).map((_, index) => {
-              // Determine the classes based on index modulo 3
               const classes = (() => {
                 switch (index % 3) {
                   case 0:
-                    return "bg-sec border-main"; // Variation 1
+                    return "bg-sec border-main";
                   case 1:
-                    return "bg-main border-sec"; // Variation 2
+                    return "bg-main border-sec";
                   case 2:
-                    return "bg-dark border-light"; // Variation 3
+                    return "bg-dark border-light";
                   default:
                     return "";
                 }
@@ -68,11 +67,6 @@ const Dragables = () => {
             })}
           </MatterBlocks>
         </div>
-        {/* <div className="absolute inset-0 pointer-events-none pt-24 text-center">
-          <h2 className="font-syne font-bold text-4xl sm:text-6xl text-center leading-tight max-w-[18ch] mx-auto">
-            akcaksncas
-          </h2>
-        </div> */}
       </div>
     </div>
   );

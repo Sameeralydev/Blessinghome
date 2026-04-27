@@ -7,11 +7,15 @@ const StudentCounselling = () => {
     content: [
       {
         type: "h2",
-        text: "Student Counselling & Mentoring Session",
+        text: "Student Counselling and Mentoring",
       },
       {
         type: "p",
-        text: "At RILLS School, our Student Counselling and Mentoring Sessions are designed to support the emotional, academic, and personal growth of every student. Through personalized guidance, experienced mentors help students set goals, overcome challenges, and develop critical life skills. These sessions provide a safe and supportive environment where students can discuss concerns, explore career pathways, and receive academic and personal advice. By integrating mentorship with counselling, RILLS ensures that every learner is empowered to build confidence, make informed decisions, and achieve their full potential.",
+        text: "At Blessing Home Public School, student guidance is an important part of school life. We help students develop confidence, healthy habits, respectful behavior, and a positive attitude toward learning.",
+      },
+      {
+        type: "p",
+        text: "Through mentoring and regular teacher support, students are encouraged to discuss challenges, improve classroom performance, and set better goals for their growth.",
       },
     ],
   };
@@ -20,7 +24,7 @@ const StudentCounselling = () => {
     <main>
       <HeroHeader
         title={"Student Counselling & Mentoring Session"}
-        description="RILLS School offers an exceptional educational experience"
+        description="Blessing Home Public School"
       />
       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />

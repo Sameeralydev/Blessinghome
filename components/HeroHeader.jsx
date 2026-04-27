@@ -2,52 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect, useState, useCallback } from "react";
+import React from "react";
 import { usePathname } from "next/navigation";
 
 const HeroHeader = ({ title, description }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-
-  const Slides = [
-    "/hero.JPG",
-    "/hero2.JPG",
-    "/hero3.JPG",
-    "/hero4.JPG",
-    "/hero5.JPG",
-    "/hero6.JPG",
-    "/hero7.JPG",
-    "/hero8.JPG",
-    "/hero9.JPG",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % Slides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const renderImages = useCallback(() => {
-    return Slides.map((item, index) => {
-      const isActive = index === currentSlide;
-      return (
-        <Image
-          key={item}
-          src={item}
-          width={1000}
-          height={600}
-          priority
-          alt={`Hero Image ${index + 1}`}
-          className={`${
-            isActive ? "opacity-100 z-[2]" : "opacity-0 z-[1]"
-          } transition-opacity duration-1000 transform h-full w-full object-cover absolute inset-0`}
-        />
-      );
-    });
-  }, [currentSlide]);
 
   return (
     <header
@@ -58,8 +18,15 @@ const HeroHeader = ({ title, description }) => {
       }`}
     >
       <div className="bg-black flex relative flex-1 rounded-3xl overflow-hidden maxW">
-        {renderImages()}
-        <div className="bg-gradient-to-b from-main/40 to-sec/40 absolute inset-0 z-[3]"></div>
+        <Image
+          src="/mainbanner.jpeg"
+          width={1600}
+          height={900}
+          priority
+          alt="Blessing Home Public School campus banner"
+          className="h-full w-full object-cover absolute inset-0"
+        />
+        <div className="bg-gradient-to-b from-main/40 via-sec/25 to-sec/70 absolute inset-0 z-[3]"></div>
         <div className="relative bg-black/20 text-light z-10 flex-1 flex flex-col items-center justify-center gap-4">
           <motion.h1
             initial={{ y: -20, opacity: 0 }}
@@ -105,31 +72,26 @@ const HeroHeader = ({ title, description }) => {
 };
 
 const Sections = () => {
-  const Sections = [
+  const sections = [
     {
       title: "About",
       icon: "/icons/About.svg",
       link: "#About",
     },
     {
-      title: "Timeline",
+      title: "Journey",
       icon: "/icons/Timeline.svg",
       link: "#Timeline",
     },
     {
-      title: "Curriculum",
+      title: "Student Life",
       icon: "/icons/Curriculum.svg",
       link: "#Curriculum",
     },
     {
-      title: "RILLS Digital",
+      title: "Admissions",
       icon: "/icons/LMS.svg",
       link: "#LMS",
-    },
-    {
-      title: "Franchises",
-      icon: "/icons/Campuses.svg",
-      link: "#franchises",
     },
     {
       title: "Contact",
@@ -137,12 +99,14 @@ const Sections = () => {
       link: "#Contact",
     },
   ];
+
   const handleSectionClick = (link) => {
     const section = document.querySelector(link);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -157,10 +121,10 @@ const Sections = () => {
       }}
       className="absolute h-9 sm:h-16 px-2 sm:px-5 rounded-t-2xl flex items-center bottom-0 left-1/2 -translate-x-1/2 bg-light text-dark"
     >
-      <div class="z-[-1] rotate-90 absolute bottom-0 left-full h-6 sm:h-12 aspect-square rounded-br-2xl sm:shadow-[1.5rem_1.5rem_0_0_#fff] shadow-[0.5rem_0.5rem_0_0_#fff] bg-transparent"></div>
-      <div class="z-[-1] absolute bottom-0 right-full h-6 sm:h-12 aspect-square rounded-br-2xl sm:shadow-[1.5rem_1.5rem_0_0_#fff] shadow-[0.5rem_0.5rem_0_0_#fff] bg-transparent"></div>
+      <div className="z-[-1] rotate-90 absolute bottom-0 left-full h-6 sm:h-12 aspect-square rounded-br-2xl sm:shadow-[1.5rem_1.5rem_0_0_#fff] shadow-[0.5rem_0.5rem_0_0_#fff] bg-transparent"></div>
+      <div className="z-[-1] absolute bottom-0 right-full h-6 sm:h-12 aspect-square rounded-br-2xl sm:shadow-[1.5rem_1.5rem_0_0_#fff] shadow-[0.5rem_0.5rem_0_0_#fff] bg-transparent"></div>
 
-      {Sections.map((item, index) => {
+      {sections.map((item, index) => {
         return (
           <div
             key={index}

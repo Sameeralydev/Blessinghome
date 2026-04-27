@@ -7,11 +7,15 @@ const TeacherTraining = () => {
     content: [
       {
         type: "h2",
-        text: "Teachers Training",
+        text: "Teacher Training",
       },
       {
         type: "p",
-        text: "At RILLS School, we prioritize continuous professional development through our comprehensive Teacher Training Sessions, ensuring that educators are equipped with the latest teaching strategies, digital tools, and classroom innovations. Every year, RILLS proudly hosts the RILLS Innovation Educators Forum, a platform where teachers from all campuses come together to share best practices, explore emerging trends in education, and foster collaborative learning. These initiatives empower our educators to deliver high-quality, innovative learning experiences, ultimately enhancing student outcomes and reinforcing RILLS’ commitment to academic excellence.",
+        text: "We believe strong schools are built by strong teachers. Blessing Home Public School supports continuous teacher development so that classroom instruction remains clear, effective, and student-focused.",
+      },
+      {
+        type: "p",
+        text: "Training and internal guidance help our teaching team improve lesson delivery, student engagement, class management, and assessment practices throughout the academic year.",
       },
     ],
   };
@@ -20,7 +24,7 @@ const TeacherTraining = () => {
     <main>
       <HeroHeader
         title={"Teacher Training"}
-        description="RILLS School offers an exceptional educational experience"
+        description="Blessing Home Public School"
       />
       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />

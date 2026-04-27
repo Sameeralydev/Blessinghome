@@ -70,8 +70,8 @@ const AdmissionForm = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="bg-green-100 text-center text-green-800 p-4 rounded-md">
-              Your form has been submitted successfully. We will get back to you
-              soon!
+              Your admission request has been submitted successfully. Our team
+              will contact you soon.
             </div>
           </motion.div>
         )}
@@ -129,14 +129,14 @@ const AdmissionForm = () => {
           select
           placeholder={"Select a grade"}
           options={[
-            { label: "A+", value: "A+" },
-            { label: "A", value: "A" },
-            { label: "B+", value: "B+" },
-            { label: "B", value: "B" },
-            { label: "C+", value: "C+" },
-            { label: "C", value: "C" },
-            { label: "D", value: "D" },
-            { label: "F", value: "F" },
+            { label: "Play Group", value: "play-group" },
+            { label: "Nursery", value: "nursery" },
+            { label: "KG", value: "kg" },
+            { label: "Grade 1", value: "grade-1" },
+            { label: "Grade 2", value: "grade-2" },
+            { label: "Grade 3", value: "grade-3" },
+            { label: "Grade 4", value: "grade-4" },
+            { label: "Grade 5", value: "grade-5" },
           ]}
           value={formData.grade}
           onChange={handleChange}
@@ -149,10 +149,10 @@ const AdmissionForm = () => {
           select
           placeholder={"Select a city"}
           options={[
-            { label: "Gujranwala", value: "gujranwala" },
-            { label: "Lahore", value: "lahore" },
-            { label: "Sialkot", value: "sialkot" },
-            { label: "Islamabad", value: "islamabad" },
+            { label: "Pakpattan", value: "pakpattan" },
+            { label: "Arifwala", value: "arifwala" },
+            { label: "Sahiwal", value: "sahiwal" },
+            { label: "Other", value: "other" },
           ]}
           value={formData.city}
           onChange={handleChange}

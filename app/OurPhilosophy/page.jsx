@@ -11,42 +11,28 @@ const OurPhilosophy = () => {
       },
       {
         type: "p",
-        text: "At RILLS, we believe that education is more than just acquiring knowledge. It is about fostering curiosity, critical thinking, and a passion for learning that lasts a lifetime.",
+        text: "Blessing Home Public School believes education should strengthen knowledge, behavior, confidence, and values together. A child learns best in a setting where expectations are clear and support is consistent.",
       },
       {
         type: "br",
       },
       {
         type: "p",
-        text: "\"The whole purpose of education is to turn mirrors into windows.\" - Sydney J. Harris",
+        text: "We encourage teachers to focus on understanding, not memorization alone. Students are guided to ask questions, improve step by step, and take ownership of their learning.",
       },
       {
         type: "br",
       },
       {
         type: "p",
-        text: "This quotation eloquently captures the essence of our educational philosophy at RILLS Schools. We are devoted to transforming our students' perspectives, encouraging them to look beyond their own reflections and explore the vibrant and colorful ideas and opportunities that extend beyond themselves.",
-      },
-      {
-        type: "br",
-      },
-      {
-        type: "p",
-        text: "Our philosophy is built on the foundation of mutual respect, empathy, and inclusiveness. We embrace diversity and strive to create a safe and welcoming environment for all of our students, regardless of their backgrounds or experiences.",
-      },
-      {
-        type: "br",
-      },
-      {
-        type: "p",
-        text: "We believe in nurturing the whole child - academically, socially, emotionally, and physically. Our approach focuses on developing critical thinking skills, creativity, and character that will serve our students throughout their lives.",
+        text: "Our philosophy is rooted in respect, care, and discipline. We aim to build a school culture where children feel valued, families feel connected, and learning remains purposeful every day.",
       },
     ],
   };
 
   return (
     <main>
-      <HeroHeader title={"Our Philosophy"} description="RILLS" />
+      <HeroHeader title={"Our Philosophy"} description="Blessing Home Public School" />
       <div className="flex flex-col gap-2 maxWSec px-6 sm:px-12 py-12">
         <RichTextRenderer content={cmsData.content} />
       </div>
