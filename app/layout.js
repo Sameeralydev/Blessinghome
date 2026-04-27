@@ -13,9 +13,9 @@ export const metadata = {
   description:
     "Blessing Home Public School in Pakpattan provides a caring and disciplined learning environment focused on academics, values, creativity, and student development.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/blessinghomelogo.jpeg",
+    shortcut: "/blessinghomelogo.jpeg",
+    apple: "/blessinghomelogo.jpeg",
   },
 };
 
